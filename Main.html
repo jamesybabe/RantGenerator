@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Word Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('rantbg.webp'); /* Ensure this is the correct path to your background image */
+            background-repeat: repeat;
+        }
+        .title {
+            text-align: center;
+            background-color: white; /* White background for the title */
+            margin: 0 auto; /* Keeps the title centered */
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+        .title h1 {
+            color: black; /* Black text for the title */
+            margin: 0; /* Removes default margin */
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            margin: 20px auto; /* Adjusted for spacing from the title */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>Ranty Pants</h1>
+    </div>
+    <div class="container">
+        <button id="generateButton">Generate Random Word</button>
+        <div id="result">Word will appear here</div>
+    </div>
+
+    <script>
+        const words = ["Acoustic Guitars", "Adele", "Alarm Clocks", "Aquariums", "Ariana Grande", "Backpacks", "Balloons", "Beaches", "Beyoncé", "Bicycles", "Billie Eilish", "Board Games", "Bookstores", "Britney Spears", "Bubble Baths", "Bubble Wrap", "Calendars", "Candles", "Chewing Gum", "Chocolate", "Clean bedsheets", "Coffee", "Compasses", "Crayons", "Crosswalks", "Dandelions", "Deck of Cards", "Dishwashers", "Elevators", "Envelopes", "Erasers", "Feather Dusters", "Fireplaces", "Fireworks", "Flashlights", "Fridays", "Frozen", "Fruit Salad", "Game of Thrones", "Gardening", "Gingerbread Houses", "Glitter", "Globes", "Hammocks", "Handwritten Letters", "Happiness", "Harry Potter", "Hats", "Highlighters", "Ice Cream Cones", "Ink Pens", "Jigsaw Puzzles", "Jump Ropes", "Jurassic Park", "Kaleidoscopes", "Kites", "La La Land", "Lady Gaga", "Lava Lamps", "Lemonade", "Libraries", "Lollipops", "Madonna", "Maps", "Marbles", "Meryl Streep", "Michael Jackson", "Mittens", "Napkins", "Notebooks", "Oprah Winfrey", "Ornaments", "Pancakes", "Paperclips", "Pasta Strainers", "Picnic Baskets", "Picnics", "Pillows", "Pirates of the Caribbean", "Pizza", "Public Parks", "Puppies", "Puzzles", "Quartz Crystals", "Quilts", "Rainbows", "Rihanna", "Roller Skates", "Rubber Bands", "Sandcastles", "Scarves", "Seashells", "Shampoo", "Smoothies", "Sneakers", "Snow Globes", "Snowflakes", "Socks", "Star Wars", "Stars", "Sticky Notes", "Stranger Things", "Sundials", "Sunglasses", "Sunsets", "Taylor Swift", "Tea", "The concept of forgiveness", "The Dark Knight", "The Hunger Games", "The Lord of the Rings", "The Matrix", "The Simpsons", "The speed of light", "Titanic", "Toothbrushes", "Towels", "Treehouses", "Umbrellas", "Unicycles", "Water Bottles", "Wind Chimes", "Windmills", "Xylophones", "Zippers"];
+
+        function generateRandomWord() {
+            const randomIndex = Math.floor(Math.random() * words.length);
+            return words[randomIndex];
+        }
+
+        document.getElementById('generateButton').addEventListener('click', function() {
+            document.getElementById('result').textContent = generateRandomWord();
+        });
+    </script>
+</body>
+</html>
